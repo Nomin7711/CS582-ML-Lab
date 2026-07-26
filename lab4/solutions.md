@@ -12,6 +12,11 @@ v_n = \frac{2\pi}{n}v_{n-2}
 
 That multiplier is greater than 1 while \(n < 2\pi \approx 6.282\), and smaller than 1 afterward. So the volume increases until \(n\) passes \(2\pi\), then decreases forever. The peak occurs at **n = 5**.
 
+
+<img width="824" height="697" alt="Screenshot 2026-07-26 at 14 58 47" src="https://github.com/user-attachments/assets/f32f32c6-1359-4a5d-be81-52bcb331010d" />
+
+<img width="393" height="306" alt="Screenshot 2026-07-26 at 15 28 55" src="https://github.com/user-attachments/assets/1ebbf894-24a4-47de-8a76-3b1b36ed7a19" />
+
 This graph shows that when the number of dimensions is above about 20, the volume is effectively zero. It was computed using the recursive formula:
 
 \[
