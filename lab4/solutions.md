@@ -6,11 +6,9 @@ Adding a dimension does two opposite things at once: volume goes up and volume g
 
 Why exactly around 5? The book's formula explains it in one line. Every time we add 2 dimensions, we multiply by:
 
-\[
-v_n = \frac{2\pi}{n}v_{n-2}
-\]
+$$v_n = \frac{2\pi}{n}v_{n-2}$$
 
-That multiplier is greater than 1 while \(n < 2\pi \approx 6.282\), and smaller than 1 afterward. So the volume increases until \(n\) passes \(2\pi\), then decreases forever. The peak occurs at **n = 5**.
+That multiplier is greater than 1 while $n < 2\pi \approx 6.282$, and smaller than 1 afterward. So the volume increases until \(n\) passes \(2\pi\), then decreases forever. The peak occurs at **n = 5**.
 
 
 <img width="824" height="697" alt="Screenshot 2026-07-26 at 14 58 47" src="https://github.com/user-attachments/assets/f32f32c6-1359-4a5d-be81-52bcb331010d" />
@@ -19,11 +17,9 @@ That multiplier is greater than 1 while \(n < 2\pi \approx 6.282\), and smaller 
 
 This graph shows that when the number of dimensions is above about 20, the volume is effectively zero. It was computed using the recursive formula:
 
-\[
-v_n = \frac{2\pi}{n}v_{n-2}
-\]
+$$v_n = \frac{2\pi}{n}v_{n-2}$$
 
-As soon as \(n > 2\pi\), the volume starts to shrink.
+As soon as $n > 2\pi$, the volume starts to shrink.
 
 This phenomenon is called **the curse of dimensionality**, and it also applies to machine learning algorithms. As the number of input dimensions increases, much more training data is required for the model to generalize well.
 
