@@ -5,7 +5,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
-import mlp_rnn
+import task4_mlp_rnn
 
 PNoz = np.loadtxt('PNOz.dat')
 
@@ -36,7 +36,7 @@ print(f"Train: {len(train)}, Valid: {len(valid)}, Test: {len(test)}")
 
 # Train recurrent MLP
 np.random.seed(42)
-net = mlp_rnn.mlp_rnn(train, traintargets, nhidden=3, outtype='linear')
+net = task4_mlp_rnn.mlp_rnn(train, traintargets, nhidden=3, outtype='linear')
 net.earlystopping(train, traintargets, valid, validtargets, eta=0.25)
 
 # Predict on test set
@@ -51,8 +51,8 @@ plt.title('Recurrent MLP Predictions vs Targets (PNOz)')
 plt.xlabel('Test Sample')
 plt.ylabel('Normalised Ozone')
 plt.tight_layout()
-plt.savefig('fig_rnn_pnoz.png', dpi=150)
-print("Saved fig_rnn_pnoz.png")
+plt.savefig('task4_ozone_rnn_result.png', dpi=150)
+print("Saved task4_ozone_rnn_result.png")
 
 test_error = 0.5*np.sum((testtargets - testout)**2)
 print(f"Test error: {test_error}")
