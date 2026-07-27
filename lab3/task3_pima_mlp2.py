@@ -2,7 +2,7 @@
 # Task 3 - Test 2-hidden-layer MLP on Pima Indian dataset
 
 import numpy as np
-import mlp2
+import task3_mlp2
 
 # Load Pima Indians Diabetes dataset
 url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
@@ -42,7 +42,7 @@ print(f"\nTrain: {len(train)}, Valid: {len(valid)}, Test: {len(test)}")
 
 # Train 2-hidden-layer MLP
 # nhidden1=8, nhidden2=4 — tapering architecture for 8-input binary classification
-net = mlp2.mlp2(train, traintargets, nhidden1=8, nhidden2=4, outtype='logistic')
+net = task3_mlp2.mlp2(train, traintargets, nhidden1=8, nhidden2=4, outtype='logistic')
 net.earlystopping(train, traintargets, valid, validtargets, eta=0.1)
 
 # Evaluate

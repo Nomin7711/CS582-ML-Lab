@@ -22,8 +22,8 @@ plt.plot(np.arange(np.shape(PNoz)[0]),PNoz[:,2],'.')
 plt.xlabel('Time (Days)')
 plt.ylabel('Ozone (Dobson units)')
 plt.title('Raw Ozone Data')
-plt.savefig('raw_ozone.png', dpi=150)
-print("Saved raw_ozone.png")
+plt.savefig('task1_raw_ozone.png', dpi=150)
+print("Saved task1_raw_ozone.png")
 
 # Normalise data
 PNoz[:,2] = PNoz[:,2]-PNoz[:,2].mean()
@@ -54,8 +54,8 @@ inputs = inputs[change,:]
 targets = targets[change,:]
 
 # Train the network
-import mlp
-net = mlp.mlp(train,traintargets,3,outtype='linear')
+import task1_mlp
+net = task1_mlp.mlp(train,traintargets,3,outtype='linear')
 net.earlystopping(train,traintargets,valid,validtargets,0.25)
 
 test = np.concatenate((test,-np.ones((np.shape(test)[0],1))),axis=1)
@@ -69,5 +69,5 @@ plt.title('MLP Predictions vs Targets (Fig 4.16)')
 plt.xlabel('Test Sample')
 plt.ylabel('Normalised Ozone')
 print("Test error:", 0.5*np.sum((testtargets-testout)**2))
-plt.savefig('fig_4_16.png', dpi=150)
-print("Saved fig_4_16.png")
+plt.savefig('task1_fig_4_16.png', dpi=150)
+print("Saved task1_fig_4_16.png")
