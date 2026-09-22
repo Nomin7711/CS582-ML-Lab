@@ -16,3 +16,7 @@
 
 - **Lab 2** — Neural Networks: Perceptron
 - **Lab 3** — Neural Networks: MLP
+- **Lab 4** — Dim Reduction: MLP
+- **Lab 5** — SVM
+- **Lab 6** — Unsupervised Learning
+- **Lab 8** — Genetic Algorithms & AI
